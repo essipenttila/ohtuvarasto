@@ -82,3 +82,7 @@ class TestVarasto(unittest.TestCase):
 
         self.assertAlmostEqual(otettu, 4)
         self.assertAlmostEqual(self.varasto.saldo, 0)
+
+    def test_merkkijonoesitys(self):
+        varasto = Varasto(10, 5)
+        self.assertEqual(str(varasto), "saldo = 5, vielä tilaa 5")
