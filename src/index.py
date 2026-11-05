@@ -15,7 +15,8 @@ def main():
     print(f"paljonko_mahtuu = {olutta.paljonko_mahtuu()}")
 
     main_toka(mehua)
-    main_kolmas(mehua, olutta)
+    main_kolmas(olutta, mehua)
+    main_nelos(olutta, mehua)
 
 def main_toka(mehua):
     print("Mehu setterit:")
@@ -31,13 +32,11 @@ def main_toka(mehua):
     huono = Varasto(-100.0)
     print(huono)
 
+def main_kolmas(olutta, mehua):
     print("Varasto(100.0, -50.7)")
     huono = Varasto(100.0, -50.7)
     print(huono)
 
-
-
-def main_kolmas(mehua, olutta):
     print(f"Olutvarasto: {olutta}")
     print("olutta.lisaa_varastoon(1000.0)")
     olutta.lisaa_varastoon(1000.0)
@@ -48,11 +47,19 @@ def main_kolmas(mehua, olutta):
     mehua.lisaa_varastoon(-666.0)
     print(f"Mehuvarasto: {mehua}")
 
+def main_nelos(olutta, mehua):
     print(f"Olutvarasto: {olutta}")
     print("olutta.ota_varastosta(1000.0)")
     saatiin = olutta.ota_varastosta(1000.0)
     print(f"saatiin {saatiin}")
     print(f"Olutvarasto: {olutta}")
+
+    print(f"Mehuvarasto: {mehua}")
+    print("mehua.otaVarastosta(-32.9)")
+    saatiin = mehua.ota_varastosta(-32.9)
+    print(f"saatiin {saatiin}")
+    print(f"Mehuvarasto: {mehua}")
+
 
 if __name__ == "__main__":
     main()
