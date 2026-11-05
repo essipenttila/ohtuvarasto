@@ -14,6 +14,10 @@ def main():
     print(f"tilavuus = {olutta.tilavuus}")
     print(f"paljonko_mahtuu = {olutta.paljonko_mahtuu()}")
 
+    main_toka(mehua)
+    main_kolmas(mehua, olutta)
+
+def main_toka(mehua):
     print("Mehu setterit:")
     print("Lisätään 50.7")
     mehua.lisaa_varastoon(50.7)
@@ -31,6 +35,9 @@ def main():
     huono = Varasto(100.0, -50.7)
     print(huono)
 
+
+
+def main_kolmas(mehua, olutta):
     print(f"Olutvarasto: {olutta}")
     print("olutta.lisaa_varastoon(1000.0)")
     olutta.lisaa_varastoon(1000.0)
@@ -46,13 +53,6 @@ def main():
     saatiin = olutta.ota_varastosta(1000.0)
     print(f"saatiin {saatiin}")
     print(f"Olutvarasto: {olutta}")
-
-    print(f"Mehuvarasto: {mehua}")
-    print("mehua.otaVarastosta(-32.9)")
-    saatiin = mehua.ota_varastosta(-32.9)
-    print(f"saatiin {saatiin}")
-    print(f"Mehuvarasto: {mehua}")
-
 
 if __name__ == "__main__":
     main()
